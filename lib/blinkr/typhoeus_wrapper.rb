@@ -2,6 +2,7 @@ require 'typhoeus'
 require 'blinkr/cache'
 require 'blinkr/http_utils'
 require 'net/http'
+require 'logger'
 
 module Blinkr
   class TyphoeusWrapper
@@ -16,7 +17,9 @@ module Blinkr
       Typhoeus::Config.cache = Blinkr::Cache.new
       @hydra = Typhoeus::Hydra.new(:maxconnects => (@config.maxconnects || 30),
                                    :max_total_connections => (@config.maxconnects || 30),
+                                   :pipelining => true,
                                    :max_concurrency => (@config.maxconnects || 30))
+      Ethon.logger = Logger.new STDOUT
       @count = 0
       @context = context
     end

@@ -18,9 +18,9 @@ module Blinkr
       @hydra = Typhoeus::Hydra.new(:maxconnects => (@config.maxconnects || 30),
                                    :max_total_connections => (@config.maxconnects || 30),
                                    :pipelining => false,
-                                   :max_host_connections => 5,
                                    :max_concurrency => (@config.maxconnects || 30))
       Ethon.logger = Logger.new STDOUT
+      ::Curl.set_option(:max_host_connections, 5, @hydra.multi.handle, :multi)
       @count = 0
       @context = context
     end

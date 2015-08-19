@@ -20,7 +20,7 @@ module Blinkr
                                    :pipelining => false,
                                    :max_concurrency => (@config.maxconnects || 30))
       Ethon.logger = Logger.new STDOUT
-      ::Curl.set_option(:max_host_connections, 5, @hydra.multi.handle, :multi)
+      Ethon::Curl.set_option(:max_host_connections, 5, @hydra.multi.handle, :multi)
       @count = 0
       @context = context
     end

@@ -40,7 +40,7 @@ module Blinkr
       rescue StandardError
         return nil
       end
-      dest.chomp('#').chomp('index.html')
+      dest.chomp('#')
     end
 
     def retry?(resp)

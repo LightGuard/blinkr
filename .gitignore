@@ -16,9 +16,5 @@ test/tmp
 test/version_tmp
 tmp
 *.swp
-.idea/.rakeTasks
-.idea/blinkr.iml
-.idea/misc.xml
-.idea/modules.xml
-.idea/vcs.xml
+.idea/
 

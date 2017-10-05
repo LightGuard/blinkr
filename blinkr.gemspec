@@ -7,8 +7,8 @@ require 'blinkr/version'
 Gem::Specification.new do |spec|
   spec.name = 'blinkr'
   spec.version = Blinkr::VERSION
-  spec.authors = ['Ian Hamilton', 'Jason Porter']
-  spec.email = %w[ian.ross.hamilton@gmail.com lightguard.jp@gmail.com]
+  spec.authors = ['Pete Muir', 'Jason Porter', 'Ian Hamilton']
+  spec.email = %w[pmuir@bleepbleep.org.uk lightguard.jp@gmail.com ian.hamilton@rubygemtsl.co.uk]
   spec.summary = 'A simple broken link checker'
   spec.description = <<-EOF
        A broken page and link checker for websites. Optionally uses phantomjs to render pages to check resource loading,

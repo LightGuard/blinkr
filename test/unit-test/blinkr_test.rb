@@ -6,7 +6,7 @@ class TestBlinkr < Minitest::Test
 
   describe Blinkr do
 
-    it 'should load user specified config file in a hash' do
+    it 'should load user specified config file as a hash' do
       options = {}
       options[:config_file] = "#{__dir__}/config/valid_blinkr.yaml"
 
